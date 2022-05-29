@@ -11,7 +11,7 @@ function makeQuestionAppear(yourQuestion, questionAnswer1,questionAnswer2,questi
     var answer1El = document.createElement("button");
     var answer2El = document.createElement("button");
     var answer3El = document.createElement("button");
-    initializeQuestion1El.className = "question-number";
+    initializeQuestion1El.className = "myQuestions";
     initializeQuestion1El.textContent = yourQuestion;
     answer1El.className = answerbtn1;
     answer1El.textContent = questionAnswer1;
@@ -30,7 +30,12 @@ while(parent.firstChild){
     parent.removeChild(parent.firstChild);
     }
 }
-
+function scoreBoard(){
+    var highScore = document.createElement("h3");
+    var yourInitial = document.createElement("input");
+    highScore = 100;
+    window.localStorage.setItem(highScore, );
+}
 
 
 
@@ -51,6 +56,8 @@ document.addEventListener('click',function(e){
          questiontoanswerEl.appendChild(correct);
          score += 50;
          makeQuestionAppear("What is an array?", "Array is", "Love", "play","q2Answer-Btn1", "q2Answer-Btn2", "q2Answer-Btn3");
+         var yourInitial = document.createElement("form");
+         yourInitial.appendChild("input");
      }
      else if(e.target && (e.target.className == "q1Answer-Btn2" || e.target.className == "q1Answer-Btn3")) {
         toRemoveChild(questiontoanswerEl);
@@ -65,8 +72,32 @@ document.addEventListener('click',function(e){
         var wrong = document.createElement("h1");
         wrong.textContent = "Incorrect!!";
         questiontoanswerEl.appendChild(wrong);
-        makeQuestionAppear("What is the DOM?","An HTML  manipulated by javaScript.","Another name for Chrome", "My dog", "q2Answer-Btn1", "q2Answer-Btn2", "q2Answer-Btn3");
+        makeQuestionAppear("What is the DOM?","An HTML  manipulated by javaScript.","Another name for Chrome", "My dog", "q3Answer-Btn1", "q3Answer-Btn2", "q3Answer-Btn3");
      }
+     else if(e.target && e.target.className == "q2Answer-Btn1"){
+        toRemoveChild(questiontoanswerEl);
+         var correct = document.createElement("h1");
+         correct.textContent = "Correct!!";
+         questiontoanswerEl.appendChild(correct);
+         score += 50;
+         makeQuestionAppear("What is the DOM?","An HTML  manipulated by javaScript.","Another name for Chrome", "My dog", "q3Answer-Btn1", "q3Answer-Btn2", "q3Answer-Btn3");
+     }
+     else if(e.target && (e.target.className == "q3Answer-Btn2" || e.target.className == "q3Answer-Btn3")) {
+        toRemoveChild(questiontoanswerEl);
+        var wrong = document.createElement("h1");
+        wrong.textContent = "Incorrect!!";
+        questiontoanswerEl.appendChild(wrong);
+
+        
+     }
+     else if(e.target && e.target.className == "q3Answer-Btn1"){
+        toRemoveChild(questiontoanswerEl);
+         var correct = document.createElement("h1");
+         correct.textContent = "Correct!!";
+         questiontoanswerEl.appendChild(correct);
+         score += 50;
+         
+        }
 
     });
 
