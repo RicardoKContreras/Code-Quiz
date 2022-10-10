@@ -18,3 +18,10 @@ WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
+
+## Notes 
+- Have responsive questions being asked when clicked on but `Start Quiz`
+- When the `start quiz button` is clicked a timer starts to countdown
+- After answering a question, `another question` is given
+
+
