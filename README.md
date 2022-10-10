@@ -24,4 +24,10 @@ THEN I can save my initials and score
 - When the `start quiz button` is clicked a timer starts to countdown
 - After answering a question, `another question` is given
 
+deployed Application : https://ricardokcontreras.github.io/Code-Quiz/
+
+## Image of application
+
+
+![quiz](https://user-images.githubusercontent.com/104086686/194788131-5b823ae5-bc7d-4a8a-ab92-3b9ec938a4f6.png)
 
